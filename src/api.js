@@ -1,4 +1,4 @@
-const BASE = (import.meta.env.VITE_API_BASE || "/api").replace(/\/$/, "");
+const BASE = (import.meta.env.API_BASE || "/api").replace(/\/$/, "");
 const STORAGE_KEY = "peerless-tickets-session";
 
 export class ApiError extends Error {
