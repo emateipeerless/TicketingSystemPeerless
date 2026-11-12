@@ -37,6 +37,10 @@ export default function App() {
             <span className="brand-name">Tickets</span>
           </div>
         </div>
+        <p className="page-quote">
+          <span className="page-quote-label">Official Completion Time Estimate Policy</span>
+          Algorithm is based on caffeine + weather + free food + the part where I thought this was going to be easy.
+        </p>
         <div className="topbar-actions">
           <div className="who">
             <strong>{session.user.display_name}</strong>
