@@ -246,6 +246,7 @@ textarea { resize: vertical; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 1rem 0 0.35rem;
+  isolation: isolate;
 }
 .track-step {
   position: relative;
@@ -263,6 +264,7 @@ textarea { resize: vertical; }
   left: -50%;
   height: 2px;
   background: var(--line);
+  z-index: 0;
 }
 .track-step:first-child::before { display: none; }
 .track-step.complete::before, .track-step.current::before, .track-step.paused::before { background: var(--good); }
@@ -274,7 +276,7 @@ textarea { resize: vertical; }
   border: 2px solid var(--line);
   background: var(--paper);
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .complete .track-dot { background: var(--good); border-color: var(--good); }
 .current .track-dot { background: var(--info); border-color: var(--info); }
@@ -363,6 +365,7 @@ textarea { resize: vertical; }
 .modal-backdrop {
   position: fixed;
   inset: 0;
+  z-index: 1;
   background: rgba(23, 36, 31, 0.46);
   display: grid;
   place-items: center;
